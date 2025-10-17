@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-xh6F2+4RjNvh7dZ2XkP4LBPQZSK9QMjXhTz9hd6ZB+6lPtfQCePzEpjhQMn5bXqG6H9G4h5W3hjCZXu6Y1yxug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <div class="card-banner"></div>
+
+    <figure class="avatar-container">
+      <img
+        src="images/pp.jpeg"
+        alt="Profile photo of the user"
+        data-testid="test-user-avatar"
+        class="avatar"
+      />
+    </figure>
+
+    <button class="follow-btn" aria-label="Follow user">Follow +</button>
+
+    <div class="profile-info">
+      <header>
+        <h2 data-testid="test-user-name" class="user-name">Noah Thompson</h2>
+      </header>
+
+      <p data-testid="test-user-bio" class="user-bio">
+        Product Designer who focuses on simplicity & usability.
+      </p>
+
+      <div class="exp-bar" aria-label="experience level">
+        <div class="bar"></div>
+      </div>
+
+      <p data-testid="test-user-time" id="current-time" class="user-time"></p>
+
+      <nav aria-label="Social Links" class="social-links">
+        <ul data-testid="test-user-social-links">
+          <li>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <img src="images/twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <img src="images/github.png" alt="GitHub icon" />
+            </a>
+            
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <img src="images/linked.png" alt="LinkedIn icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <img src="images/instagram.jpeg" alt="Instagram icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      
+    </div>
+
+    <div class="stats">
+      <div><strong>72.9K</strong><span>Likes</span></div>
+      <div><strong>828</strong><span>Posts</span></div>
+      <div><strong>342.9K</strong><span>Views</span></div>
+    </div>
+
+    <section aria-labelledby="hobbies-title" class="hobbies">
+      <h3 id="hobbies-title">Hobbies</h3>
+      <ul data-testid="test-user-hobbies">
+        <li>Continuous Learning</li>
+        <li>Playing football</li>
+        <li>Traveling</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="dislikes-title" class="dislikes">
+      <h3 id="dislikes-title">Dislikes</h3>
+      <ul data-testid="test-user-dislikes">
+        <li>Cluttered UI</li>
+        <li>Unclear feedback</li>
+        <li>Slow Internet</li>
+      </ul>
+    </section>
+  </article>
+
+  <script>
+    const timeEl = document.getElementById("current-time");
+    const updateTime = () => (timeEl.textContent = Date.now());
+    updateTime();
+    setInterval(updateTime, 1000);
+
+const followBtn = document.querySelector(".follow-btn");
+
+followBtn.addEventListener("click", () => {
+  if (followBtn.textContent.trim() === "Follow +") {
+    followBtn.textContent = "Following";
+    followBtn.style.backgroundColor = "#3b82f6";
+    followBtn.style.color = "#fff";
+  } else {
+    followBtn.textContent = "Follow +";
+    followBtn.style.backgroundColor = "#f9fafb";
+    followBtn.style.color = "#000";
+  }
+});
+
+  </script>
+</body>
+</html>
