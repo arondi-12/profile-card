@@ -1,19 +1,8 @@
-A Responsive Profile Card
+Personal Profile Website
 
-A simple, responsive, and accessible Profile Card built with semantic HTML, modern CSS, and vanilla JavaScript.
-The card displays a user’s profile photo, bio, hobbies, dislikes, and live-updating time — along with social media icons that link externally.
-Features
+This is a personal profile website showcasing my background, goals, and contact information. 
+It includes a profile card on the homepage, an "About Me" section, and a "Contact Us" page, all connected through a navigation bar.
 
-Responsive Design — Scales beautifully across desktop, tablet, and mobile devices.
-
-Dynamic Time Display — Updates live every second using JavaScript.
-
-Interactive Follow Button — Toggles between “Follow +” and “Following” with visual feedback.
-
-Accessible & Semantic HTML — Proper use of aria-labels, alt attributes, and landmark tags.
-
-Social Media Links — Clickable icons for Twitter, GitHub, LinkedIn, and Instagram.
-Technologies Used
 
 HTML5 — Semantic and accessible markup
 
