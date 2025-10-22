@@ -167,15 +167,17 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html" data-testid="nav-profile">Profile</a></li>
-            <li><a href="aboutme.html" data-testid="nav-about">About Me</a></li>
-            <li><a href="contactus.html" data-testid="nav-contact">Contact Us</a></li>
+    <header class="navbar" data-testid="test-navbar">
+        <h1 class="logo">My Profile</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" data-testid="test-nav-home">Home</a></li>
+            <li><a href="aboutme.html" data-testid="test-nav-about">About Me</a></li>
+            <li><a href="contactus.html" data-testid="test-nav-contact">Contact</a></li>
           </ul>
         </nav>
       </header>
+      
       
   <article data-testid="test-contact-card" class="contact-card">
     <div class="container">
