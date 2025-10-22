@@ -1,154 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-xh6F2+4RjNvh7dZ2XkP4LBPQZSK9QMjXhTz9hd6ZB+6lPtfQCePzEpjhQMn5bXqG6H9G4h5W3hjCZXu6Y1yxug=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-    <title>About Me</title>
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-        .section{
-            width: 100%;
-            min-height: 100vh;
-            background-color: #ddd;
-        }
-        .container{
-            width: 80%;
-            display: block;
-            margin: auto;
-            padding-top: 100px;
-        }
-        .content-section{
-            float: left;
-            width: 55%;
-        }
-        .image-section{
-            float: right;
-            width: 40%;
-        }
-        .image-section img{
-            width: 100%;
-            height: auto;
-        }
-        .content-section .title{
-            text-transform: uppercase;
-            font-size: 28px;
-        }
-        .content-section .content h3{
-            margin-top: 20px;
-            color: #5d5d5d;
-            font-size: 21px;
-        }
-        .content-section .content p{
-            margin-top: 10px;
-            font-family: sans-serif;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-        .content-section .content .button{
-            margin-top: 30px;
-        }
-        .content-section .content .button a{
-            background-color: #3d3d3d;
-            padding: 12px 40px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 25px;
-            letter-spacing: 1.5px;
-        }
-        .content-section .content .button a:hover{
-            background-color: #a52a2a;
-            color: #fff;
-        }
-        .content-section .social{
-            margin: 40px 40px;
-        }
-        .content-section .social i{
-            color: #a52a2a;
-            font-size: 30px;
-            padding: 0px 10px;
-        }
-        .content-section .social i:hover{
-            color: #3d3d3d;
-        }
-        @media screen and (max-width: 768px){
-            .container{
-            width: 80%;
-            display: block;
-            margin: auto;
-            padding-top: 50px;
-        }
-        .content-section{
-            float: none;
-            width: 100%;
-            display: block;
-            margin: auto;
-        }
-        .image-section{
-            float: none;
-            width: 100%;
-        }
-        .image-section img{
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-        .content-section .title{
-            text-align: center;
-            font-size: 19px;
-        }
-        .content-section .content .button{
-            text-align: center;
-        }
-        .content-section .content .button a{
-            padding: 9px 30px;
-        }
-        .content-section .social{
-            text-align: center;
-        }
-        }
-    </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background-color: #1c00b5;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a:focus {
+      color: #ffd700;
+    }
+
+    main {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+      background-color: #e9ecef;
+    }
+
+    .container {
+      width: 85%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+
+    .image-section {
+      flex: 1 1 300px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .content-section {
+      flex: 2 1 500px;
+    }
+
+    .content-section h1 {
+      font-size: 28px;
+      text-transform: uppercase;
+      color: #1c00b5;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      color: #333;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    section p,
+    section ul {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .content-section .social {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .content-section .social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #1c00b5;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .content-section .social a:hover,
+    .content-section .social a:focus {
+      background-color: #a52a2a;
+      transform: scale(1.1);
+    }
+
+    .content-section .social i {
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-section,
+      .content-section {
+        width: 100%;
+      }
+
+      .content-section .social {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <main data-testid="test-about-page">
-        <section>
-            <div class="section">
-                <div class="container">
-                    <div class="content-section">
-                        <div class="title">
-                            <h1>About Me</h1>
-                        </div>
-                        <div class="content">
-                            <h3>Title of What I'm writing about me!</h3>
-                            <p>I am a passionate learner of Software engineering hoping <br> to make a fortune and pursue my dream career
-                            I am very passionate about what I like and love detail. Hope to become the best at it though late, it's never too late!</p>
-                            <div class="button">
-                                <a href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="social">
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="image-section">
-                        <img src="images/pp.jpeg" alt="image">
-                    </div>
-                </div>
-            </div>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" data-testid="nav-profile">Profile</a></li>
+        <li><a href="aboutme.html" data-testid="nav-about">About Me</a></li>
+        <li><a href="contactus.html" data-testid="nav-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main data-testid="test-about-page">
+    <div class="container">
+      <div class="image-section">
+        <img src="images/pp.jpeg" alt="Portrait of the author smiling" />
+      </div>
+
+      <div class="content-section">
+        <h1>About Me</h1>
+
+        <section data-testid="test-about-bio">
+          <h2>My Journey</h2>
+          <p>
+            I am a passionate learner of software engineering who believes in continuous growth and curiosity.
+            I started exploring technology to solve real-life challenges and to build meaningful solutions that
+            make everyday life better. Though I began my coding journey later than some, I firmly believe it’s never too late to learn something new and excel at it.
+          </p>
         </section>
-    </main>
+
+        <section data-testid="test-about-goals">
+          <h2>Goals in This Program</h2>
+          <ul>
+            <li>Strengthen my foundation in front-end and back-end development.</li>
+            <li>Develop confidence in building and deploying complete web projects.</li>
+            <li>Collaborate with peers to enhance problem-solving and teamwork skills.</li>
+            <li>Transition into a professional software engineering role after completion.</li>
+          </ul>
+        </section>
+
+        <section data-testid="test-about-confidence">
+          <h2>Areas of Low Confidence</h2>
+          <p>
+            I sometimes struggle with debugging complex issues and optimizing performance.
+            However, I’m working to improve these areas by taking on more challenging coding tasks
+            and practicing consistency in project reviews and refactoring.
+          </p>
+        </section>
+
+        <section data-testid="test-about-future-note">
+          <h2>Note to My Future Self</h2>
+          <p>
+            Remember why you started this journey — not just to code, but to create.
+            Keep learning, stay humble, and don’t let setbacks discourage you. Progress takes time,
+            but the persistence you show now will define your success later.
+          </p>
+        </section>
+
+        <section data-testid="test-about-extra">
+          <h2>Extra Thoughts</h2>
+          <p>
+            I’ve realized that community and collaboration play a huge role in becoming a better developer.
+            I hope to contribute to open-source projects soon and inspire others who are just starting out.
+          </p>
+        </section>
+
+        <div class="social" data-testid="test-user-social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-facebook" aria-label="Facebook">
+            <img src="images/facebook.png" alt="facebook icon">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter" aria-label="Twitter">
+            <img src="images/twitter.png" alt="twitter icon">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-instagram" aria-label="Instagram">
+            <img src="images/insta.jpeg" alt="instagram icon">
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin" aria-label="LinkedIn">
+            <img src="images/linked.png" alt="linkedin icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

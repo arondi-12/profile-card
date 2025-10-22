@@ -16,6 +16,35 @@
       background-color: hsl(185, 51%, 75%);
       font-size: 14px;
     }
+    .navbar {
+  background-color: #1c00b5;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #ffd700;
+}
 
     .container {
       width: 80%;
@@ -138,13 +167,22 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" data-testid="nav-profile">Profile</a></li>
+            <li><a href="aboutme.html" data-testid="nav-about">About Me</a></li>
+            <li><a href="contactus.html" data-testid="nav-contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      
   <article data-testid="test-contact-card" class="contact-card">
     <div class="container">
       <h1>Connect With Us</h1>
       <p>We would love to respond to your queries and help you succeed.<br> Feel free to get in touch with us.</p>
 
       <div class="contact-box">
-        <!-- Left: Form -->
         <div class="contact-left">
           <h3>Send your request</h3>
           <form id="contactForm" novalidate>
@@ -180,7 +218,6 @@
           </form>
         </div>
 
-        <!-- Right: Info -->
         <div class="contact-right">
           <h3>Reach Us</h3>
           <table>
@@ -209,7 +246,6 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      // Clear messages
       successMsg.textContent = "";
       document.querySelectorAll(".error-message").forEach(el => el.textContent = "");
 
@@ -220,13 +256,11 @@
 
       let isValid = true;
 
-      // Name validation
       if (!name.value.trim()) {
         document.getElementById("error-name").textContent = "Full name is required.";
         isValid = false;
       }
 
-      // Email validation
       const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
       if (!email.value.trim()) {
         document.getElementById("error-email").textContent = "Email is required.";
@@ -236,13 +270,11 @@
         isValid = false;
       }
 
-      // Subject validation
       if (!subject.value.trim()) {
         document.getElementById("error-subject").textContent = "Subject is required.";
         isValid = false;
       }
 
-      // Message validation
       if (!message.value.trim()) {
         document.getElementById("error-message").textContent = "Message is required.";
         isValid = false;

@@ -9,13 +9,60 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   background-color: #f3f4f6;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack navbar on top, content below */
+  align-items: center;    /* Center content horizontally */
   min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #1c00b5;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background-color: #fff;
+  color: #1c00b5;
+}
+
+.nav-links li a[aria-current="page"] {
+  background-color: #fff;
+  color: #1c00b5;
 }
 
 .profile-card {
   background: #fff;
+  margin-top: 40px;
   width: 340px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
